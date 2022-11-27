@@ -30,11 +30,18 @@ body {
     gap: 1rem;
 }
 
+
+
 .card__option-group {
     display: inline-flex;
     justify-content: space-between;
 }
 
+.card__icon {
+    padding: 0.875rem;
+    border-radius: 50%;
+    background-color: var(--clr-neutral-900)
+}
 .card__option {
     display: block;
     width: 3em;
