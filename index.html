@@ -66,4 +66,19 @@
       >. Coded by <a href="#">Your Name Here</a>.
     </div> -->
   </body>
+
+  <script>
+    let selectedRating;
+    const ratingOptions = document.querySelectorAll(".card__option");
+
+    ratingOptions.forEach((option) => {
+      option.addEventListener("click", () => {
+        if (typeof selectedRating !== "undefined") {
+          selectedRating.classList.remove("selected-option");
+        }
+        selectedRating = option;
+        option.classList.add("selected-option");
+      });
+    });
+  </script>
 </html>

@@ -28,9 +28,8 @@ body {
     border-radius: 1rem;
     display: grid;
     gap: 1rem;
+    max-width: 21rem;
 }
-
-
 
 .card__option-group {
     display: inline-flex;
@@ -74,4 +73,9 @@ body {
 .button:is(:hover,:focus) {
     background-color: var(--clr-neutral-100);
     color: var(--clr-primary-400);
+}
+
+.selected-option {
+    background-color: var(--clr-neutral-400);
+    color: var(--clr-neutral-100);
 }
