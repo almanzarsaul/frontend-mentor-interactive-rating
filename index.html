@@ -28,36 +28,42 @@
   <body>
     <main>
       <article class="card">
-        <img
-          class="card__icon"
-          src="./images/icon-star.svg"
-          alt="Image of a star."
-        />
-        <h1 class="card__title">How did we do?</h1>
-        <p class="card__description">
-          Please let us know how we did with your support request. All feedback
-          is appreciated to help us improve our offering!
-        </p>
-        <div class="card__option-group">
-          <div class="card__option">1</div>
-          <div class="card__option">2</div>
-          <div class="card__option">3</div>
-          <div class="card__option">4</div>
-          <div class="card__option">5</div>
+        <div class="rating-state">
+          <img
+            class="card__icon"
+            src="./images/icon-star.svg"
+            alt="Image of a star."
+          />
+          <h1 class="card__title">How did we do?</h1>
+          <p class="card__description">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+          <div class="card__option-group">
+            <div class="card__option">1</div>
+            <div class="card__option">2</div>
+            <div class="card__option">3</div>
+            <div class="card__option">4</div>
+            <div class="card__option">5</div>
+          </div>
+          <button class="button">Submit</button>
         </div>
-        <button class="button">Submit</button>
+
+        <!-- Thank You State Begins -->
+        <div class="thank-you-state hidden">
+          <img
+            src="./images/illustration-thank-you.svg"
+            alt="Thank you illustration involving a phone with a credit card."
+          />
+          <p>You selected <span class="selected-rating"></span> out of 5</p>
+          <h1 class="card__title">Thank you!</h1>
+          <p class="card__description">
+            We appreciate you taking the time to give a rating. If you ever need
+            more support, don’t hesitate to get in touch!
+          </p>
+        </div>
       </article>
     </main>
-
-    <!-- Rating state end -->
-
-    <!-- Thank you state start -->
-
-    <!-- Add rating here -->
-    <!-- out of 5 Thank you! We appreciate you taking the time to give a rating. If -->
-    <!-- you ever need more support, don’t hesitate to get in touch! -->
-
-    <!-- Thank you state end -->
 
     <!-- <div class="attribution">
       Challenge by
@@ -70,6 +76,11 @@
   <script>
     let selectedRating;
     const ratingOptions = document.querySelectorAll(".card__option");
+    const submitButton = document.querySelector("button");
+    const selectedRatingSpan = document.querySelector(".selected-rating");
+
+    const ratingState = document.querySelector(".rating-state");
+    const thankYouState = document.querySelector(".thank-you-state");
 
     ratingOptions.forEach((option) => {
       option.addEventListener("click", () => {
@@ -79,6 +90,17 @@
         selectedRating = option;
         option.classList.add("selected-option");
       });
+    });
+
+    submitButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      if (typeof selectedRating === "undefined") {
+        alert("Please select a rating number out of five.");
+      } else {
+        selectedRatingSpan.innerText = selectedRating.innerText;
+        ratingState.classList.add("hidden");
+        thankYouState.classList.remove("hidden");
+      }
     });
   </script>
 </html>

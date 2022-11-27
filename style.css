@@ -26,9 +26,22 @@ body {
     margin: 1rem;
     padding: 2rem;
     border-radius: 1rem;
+    max-width: 21rem;
+}
+
+.rating-state {
     display: grid;
     gap: 1rem;
-    max-width: 21rem;
+}
+
+.thank-you-state {
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+}
+
+.thank-you-state .card__description {
+    text-align: center;
 }
 
 .card__option-group {
@@ -78,4 +91,8 @@ body {
 .selected-option {
     background-color: var(--clr-neutral-400);
     color: var(--clr-neutral-100);
+}
+
+.hidden {
+    display: none;
 }
