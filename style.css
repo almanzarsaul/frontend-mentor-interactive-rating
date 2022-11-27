@@ -1,0 +1,70 @@
+:root {
+    --clr-primary-400: hsl(25, 97%, 53%);
+    
+    --clr-neutral-100: hsl(0, 0%, 100%);
+    --clr-neutral-300: hsl(217, 12%, 63%);
+    --clr-neutral-400: hsl(216, 12%, 54%);
+    --clr-neutral-700: hsl(213, 19%, 18%);
+    --clr-neutral-900: hsl(216, 12%, 8%);
+
+    --ff-primary: "Overpass", sans-serif;
+
+    --fw-bold: 700;
+}
+
+body {
+    font-family: var(--ff-primary);
+    font-size: 0.9375rem;
+    background-color: var(--clr-neutral-900);
+    color: var(--clr-neutral-300);
+    display: grid;
+    place-items: center;
+}
+
+.card {
+    background-color: var(--clr-neutral-700);
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.card__option-group {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.card__option {
+    display: block;
+    width: 3em;
+    line-height: 3em;
+    border-radius: 50%;
+    background-color: var(--clr-neutral-900);
+    text-align: center;
+    cursor: pointer;
+}
+
+.card__option:is(:hover,:focus) {
+    background-color: var(--clr-primary-400);
+    color: var(--clr-neutral-100)
+}
+
+.card__title {
+    color: white;
+}
+
+.button {
+    cursor: pointer;
+    border: none;
+    background-color: var(--clr-primary-400);
+    color: var(--clr-neutral-100);
+    padding: .7rem 1.5rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+}
+
+.button:is(:hover,:focus) {
+    background-color: var(--clr-neutral-100);
+    color: var(--clr-primary-400);
+}

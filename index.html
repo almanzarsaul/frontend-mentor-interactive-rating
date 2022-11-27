@@ -13,23 +13,35 @@
     />
 
     <title>Frontend Mentor | Interactive rating component</title>
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="reset.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main>
-      <article>
-        <h1>How did we do?</h1>
-        <p>
+      <article class="card">
+        <img src="./images/icon-star.svg" alt="Image of a star." />
+        <h1 class="card__title">How did we do?</h1>
+        <p class="card__description">
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
         </p>
-        <ul>
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
-          <li>4</li>
-          <li>5</li>
-        </ul>
-        <button>Submit</button>
+        <div class="card__option-group">
+          <div class="card__option">1</div>
+          <div class="card__option">2</div>
+          <div class="card__option">3</div>
+          <div class="card__option">4</div>
+          <div class="card__option">5</div>
+        </div>
+        <button class="button">Submit</button>
       </article>
     </main>
 
